@@ -1,0 +1,8 @@
+{
+	"name": "etilbudsavis/klein.php",
+	"autoload": {
+		"files": [
+			"klein.php"
+		]
+	}
+}
