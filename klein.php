@@ -858,6 +858,11 @@ class _App {
         return call_user_func_array($this->$method, $args);
     }
 
+    // Check if service exists
+    public function __isset($name) {
+        return isset($this->services[$name]);
+    }
+
     // Register a lazy service
     public function register($name, $closure) {
         if (isset($this->services[$name])) {
