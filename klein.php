@@ -221,6 +221,10 @@ function dispatch($uri = null, $req_method = null, array $params = null, $captur
 
              if ($possible_match) {
                   if (null !== $params) {
+                        //url decode params
+                        foreach($params as &$param) {
+                            $param = urldecode($param);
+                        }
                        $_REQUEST = array_merge($_REQUEST, $params);
                   }
                   try {
