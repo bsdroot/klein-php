@@ -219,7 +219,7 @@ function dispatch($uri = null, $req_method = null, array $params = null, $captur
              $methods_matched = array_filter($methods_matched);
              $methods_matched = array_unique($methods_matched);
 
-             if ($possible_match) {
+             if ($possible_match && (!$app->stop || $_route === '*')) {
                   if (null !== $params) {
                         //url decode params
                         foreach($params as &$param) {
@@ -843,6 +843,7 @@ class _Validator {
 
 class _App {
 
+    public $stop = false;
     protected $services = array();
 
     // Check for a lazy service
