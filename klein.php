@@ -219,7 +219,7 @@ function dispatch($uri = null, $req_method = null, array $params = null, $captur
              $methods_matched = array_filter($methods_matched);
              $methods_matched = array_unique($methods_matched);
 
-             if ($possible_match && (!$app->stop || $_route === '*')) {
+             if ($possible_match && (!$app->stop || ($_route === '*' || null == $_route))) {
                   if (null !== $params) {
                         //url decode params
                         foreach($params as &$param) {
