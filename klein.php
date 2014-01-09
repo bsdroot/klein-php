@@ -601,7 +601,7 @@ class _Response extends StdClass {
     }
 
     // Renders the current view
-    public function yield() {
+    public function _yield() {
         require $this->_view;
     }
 
@@ -614,7 +614,7 @@ class _Response extends StdClass {
         }
         $this->_view = $view;
         if (null === $this->_layout) {
-            $this->yield();
+            $this->_yield();
         } else {
             require $this->_layout;
         }
