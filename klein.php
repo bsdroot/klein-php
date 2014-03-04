@@ -323,7 +323,7 @@ class _Request {
     }
 
     public function __isset($param) {
-        return isset($_REQUEST[$param]);
+        return array_key_exists($param, $_REQUEST);
     }
 
     public function __get($param) {
