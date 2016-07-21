@@ -1,5 +1,5 @@
 {
-	"name": "shopgun/klein.php",
+	"name": "shopgun/klein-php",
 	"autoload": {
 		"files": [
 			"klein.php"
